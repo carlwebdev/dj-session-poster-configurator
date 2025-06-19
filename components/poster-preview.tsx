@@ -32,12 +32,12 @@ export default function PosterPreview({ posterData }: PosterPreviewProps) {
         <div className="text-center mb-8 mt-4">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter mb-2 uppercase">{eventName}</h1>
           <div className="flex items-center justify-center gap-2 mb-2">
-            <Calendar className="h-4 w-4" />
-            <p className="text-lg">{date}</p>
-          </div>
-          <div className="flex items-center justify-center gap-2">
             <MapPin className="h-4 w-4" />
             <p className="text-lg">{venue}</p>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <Calendar className="h-4 w-4" />
+            <p className="text-lg">{date}</p>
           </div>
         </div>
 
