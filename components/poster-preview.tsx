@@ -42,14 +42,17 @@ export default function PosterPreview({ posterData }: PosterPreviewProps) {
         </div>
 
         {/* Rooms and DJs */}
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr">
           {rooms.map((room, index) => (
-            <div key={index} className="bg-black/50 backdrop-blur-sm p-4 rounded-lg border border-white/10">
+            <div
+              key={index}
+              className="bg-black/50 backdrop-blur-sm p-4 rounded-lg border border-white/10 flex flex-col"
+            >
               <div className="flex items-center gap-2 mb-3">
                 <Music className="h-5 w-5 text-purple-400" />
                 <h2 className="text-xl font-bold text-purple-300">{room.name}</h2>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 flex-1">
                 {room.djs.map((dj, djIndex) => (
                   <div key={djIndex} className="flex justify-between items-center">
                     <span className="font-medium">{dj.name}</span>
